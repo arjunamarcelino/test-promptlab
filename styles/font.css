@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "InterDisplay-Bold";
+    src: url("/fonts/InterDisplay-Bold.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "InterDisplay-Medium";
+    src: url("/fonts/InterDisplay-Medium.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "InterDisplay-Regular";
+    src: url("/fonts/InterDisplay-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "InterDisplay-SemiBold";
+    src: url("/fonts/InterDisplay-SemiBold.ttf") format("truetype");
+    font-display: swap;
+}
+  
+/*# sourceMappingURL=fonts.css.map */  
