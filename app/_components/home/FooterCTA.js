@@ -17,7 +17,7 @@ export default function FooterCTA() {
   return (
     <section
       id="footercta"
-      className="relative w-full h-auto flex flex-col items-center justify-center bg-background text-white px-[60px]"
+      className="relative w-full h-auto flex flex-col items-center justify-center bg-transparant text-white px-[60px] mb-[50px]"
     >
       <div className="flex flex-col bg-[url('/images/img-cta-highlight.png')] bg-cover rounded-3xl justify-center items-center py-[77px] w-full">
         <div className="max-w-[636px] flex flex-col items-center text-center mx-auto gap-4 py-[100px]">

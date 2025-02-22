@@ -17,7 +17,7 @@ export default function Build() {
   return (
     <section
       id="build"
-      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-background text-white px-[60px] mb-[120px]"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-transparant text-white px-[60px] mb-[120px]"
     >
       <div className="flex flex-col bg-gradient-to-b from-[#101D1E] to-[#173038] rounded-3xl justify-center items-center py-[77px] w-full">
         <motion.h1

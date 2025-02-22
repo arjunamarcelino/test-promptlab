@@ -16,7 +16,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[200vh] overflow-hidden bg-background"
+      className="relative min-h-[200vh] overflow-hidden bg-transparant"
     >
       <div className="relative h-screen w-full flex items-center justify-center">
         <div className="absolute inset-0 w-full h-full pb-4">

@@ -9,40 +9,35 @@ import Works from "../_components/home/Works";
 import Loading from "../_components/Loading";
 import { useTheme } from "next-themes";
 import { Particles } from "../_components/magicui/particles";
+import Header from "../_components/Header";
+import Footer from "../_components/Footer";
+import StickyOverlay from "../_components/home/StickyOverlay";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
-  const { resolvedTheme } = useTheme();
-  const [color, setColor] = useState("#ffffff");
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 3000);
 
-    setColor(resolvedTheme === "dark" ? "#ffffff" : "#000000");
-
     return () => clearTimeout(timer);
-  }, [resolvedTheme]);
+  }, []);
 
   return (
     <>
       <Loading isLoading={isLoading} />
       {!isLoading && (
         <main className="w-full">
+          <StickyOverlay />
+          <Header />
           <Hero />
           <Start />
           <Works />
           <Build />
           <Connect />
           <FooterCTA />
-          <Particles
-            className="absolute inset-0 z-0"
-            quantity={100}
-            ease={80}
-            color={color}
-            refresh
-          />
+          <Footer />
         </main>
       )}
     </>

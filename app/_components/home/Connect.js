@@ -16,7 +16,7 @@ export default function Connect() {
   return (
     <section
       id="connect"
-      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-background text-white px-[60px] mb-[171px]"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-transparant text-white px-[60px] mb-[171px]"
     >
       <motion.h2
         initial={{ opacity: 0, y: 20 }}

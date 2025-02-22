@@ -17,7 +17,7 @@ export default function Works() {
   return (
     <section
       id="works"
-      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-background text-white px-[60px] mb-[100px]"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-transparant text-white px-[60px] mb-[100px]"
     >
       <div className="flex flex-col bg-gradient-to-b from-[#10181E] to-[#0E1F25] rounded-3xl justify-center items-center py-10 w-full">
         <div className="w-[90%] max-w-[1200px] flex flex-col lg:flex-row items-center rounded-xl py-6">

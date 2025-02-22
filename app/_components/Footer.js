@@ -11,9 +11,9 @@ export default function Footer() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ delay: 0.3, type: "spring", stiffness: 250 }}
-      className="w-full h-full flex flex-col lg:flex-row items-center justify-between p-6 lg:px-20 lg:h-30 bg-background"
+      className="relative w-full h-full flex flex-col lg:flex-row items-center justify-between p-6 lg:px-20 lg:h-30 bg-background"
     >
-      <div className="w-full flex flex-col items-center lg:items-start text-center lg:text-left">
+      <div className="w-full flex flex-col items-center lg:items-start text-center lg:text-left bg-background">
         <Image
           src="/images/img-promptlab-logo.png"
           alt="PromptLab logo"

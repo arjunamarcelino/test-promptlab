@@ -5,8 +5,10 @@ import { FaGithub } from "react-icons/fa";
 import { MdOutlineContentCopy } from "react-icons/md";
 import { motion } from "framer-motion";
 import { copyToClipboard } from "../../_libs/uiUtils";
+import { useRouter } from "next/navigation";
 
 export default function Start() {
+  const router = useRouter();
   const [isMounted, setIsMounted] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -29,7 +31,7 @@ export default function Start() {
   return (
     <section
       id="start"
-      className="relative w-full flex flex-col items-center justify-center bg-background text-white mt-[150px] mb-[80px]"
+      className="relative w-full flex flex-col items-center justify-center bg-transparant text-white mt-[150px] mb-[80px]"
     >
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
@@ -58,7 +60,12 @@ export default function Start() {
         )}
       </div>
       <div className="flex flex-row gap-3 mt-8">
-        <PrimaryButton className="min-w-[135px]">Start Free</PrimaryButton>
+        <PrimaryButton
+          className="min-w-[135px]"
+          onClick={() => router.push("/product")}
+        >
+          Start Free
+        </PrimaryButton>
         <SecondaryButton className="flex items-center justify-center min-w-[135px] pointer-events-none">
           <span className="rounded">
             <FaGithub className="text-white" size={16} />
