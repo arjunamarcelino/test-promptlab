@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { PrimaryButton, SecondaryButton } from "../ui/button";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Works() {
@@ -21,9 +22,15 @@ export default function Works() {
       <div className="flex flex-col bg-gradient-to-b from-[#10181E] to-[#0E1F25] rounded-3xl justify-center items-center py-10 w-full">
         <div className="w-[90%] max-w-[1200px] flex flex-col lg:flex-row items-center rounded-xl py-6">
           <div className="lg:w-1/2 text-white max-w-[522px]">
-            <h2 className="text-[56px] font-interDisplayMedium">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1, type: "spring", stiffness: "250" }}
+              className="text-[56px] font-interDisplayMedium"
+            >
               AI That Works the Way You Do
-            </h2>
+            </motion.h2>
             <p className="text-secondary-200 mt-4">
               PromptLab integrates with the best AI models, giving you the
               freedom to choose the right tool for the job.

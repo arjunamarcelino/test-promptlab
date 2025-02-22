@@ -19,7 +19,7 @@ export default function Hero() {
       className="relative min-h-[200vh] overflow-hidden bg-background"
     >
       <div className="relative h-screen w-full flex items-center justify-center">
-        <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 w-full h-full pb-4">
           <RiveComponentControls
             play={true}
             playOnCanvas={true}
@@ -50,7 +50,27 @@ export default function Hero() {
           </motion.h1>
         </div>
       </div>
-      <div className="absolute flex items-center justify-center top-[-23px] z-30 pointer-events-none">
+      <div
+        style={{ clipPath: "ellipse(100% 80% at center top)" }}
+        className="h-screen bg-background/40 absolute inset-x-0 z-10 flex items-center justify-center"
+      />
+      <div className="w-full inset-x-0 h-[410px] absolute z-0 bottom-[410px]">
+        <Image
+          src={"/images/img-hero-highlight-2.png"}
+          alt="highlight"
+          width={1000}
+          height={1000}
+          priority
+          className="size-full object-fill"
+        />
+      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.1, type: "spring", stiffness: "250" }}
+        className="absolute flex items-center justify-center top-[-23px] z-30 pointer-events-none"
+      >
         <Image
           src="/images/img-hero-mockup.png"
           alt="mockup"
@@ -59,7 +79,7 @@ export default function Hero() {
           height={1000}
           className="w-screen max-w-full h-auto object-contain"
         />
-      </div>
+      </motion.div>
     </section>
   );
 }

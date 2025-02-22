@@ -1,8 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import { PrimaryButton, SecondaryButton } from "../ui/button";
-import { PiGithubLogo } from "react-icons/pi";
+import { FaGithub } from "react-icons/fa";
 import { MdOutlineContentCopy } from "react-icons/md";
+import { motion } from "framer-motion";
 import { copyToClipboard } from "../../_libs/uiUtils";
 
 export default function Start() {
@@ -30,14 +31,20 @@ export default function Start() {
       id="start"
       className="relative w-full min-h-screen flex flex-col items-center justify-center bg-background text-white"
     >
-      <h1 className="text-5xl font-interDisplayMedium">
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.1, type: "spring", stiffness: "250" }}
+        className="absolute flex items-center justify-center top-44 z-30 pointer-events-none text-5xl font-interDisplayMedium"
+      >
         Start Building with AI Now!
-      </h1>
+      </motion.h1>
       <p className="text-lg text-primary-100 mt-4">
         Type your prompt. Watch your code come to life.
       </p>
 
-      <div className="relative flex items-center min-w-[489px] gap-3 px-5 py-3 mt-10 text-xl text-secondary font-mPlusCodeLatinReguler border rounded-3xl bg-gradient-to-b from-[#10181E] to-[#0E1F25] border-[#1E3A47] shadow-md justify-between">
+      <div className="relative flex items-center min-w-[489px] gap-3 px-5 py-3 mt-10 text-xl text-secondary-400 font-mPlusCodeLatinReguler border rounded-3xl bg-gradient-to-b from-[#10181E] to-[#0E1F25] border-[#1E3A47] shadow-md justify-between">
         <span className="tracking-wide">{command}</span>
         <MdOutlineContentCopy
           className="cursor-pointer hover:text-white transition"
@@ -54,7 +61,7 @@ export default function Start() {
         <PrimaryButton className="min-w-[135px]">Start Free</PrimaryButton>
         <SecondaryButton className="flex items-center justify-center min-w-[135px] pointer-events-none">
           <span className="rounded">
-            <PiGithubLogo className="text-white" size={16} />
+            <FaGithub className="text-white" size={16} />
           </span>
           <span className="flex items-center">2,092</span>
         </SecondaryButton>

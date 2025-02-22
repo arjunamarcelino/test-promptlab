@@ -59,25 +59,25 @@ export default function Header() {
         </motion.button>
         <nav className="flex items-center gap-[56px] text-lg text-primary-100">
           <button
-            className="hover:text-secondary transition-all"
+            className="hover:text-secondary-400 transition-all"
             onClick={() => scrollToSection("")}
           >
             Docs
           </button>
           <button
-            className="hover:text-secondary transition-all"
+            className="hover:text-secondary-400 transition-all"
             onClick={() => window.open()}
           >
             Model
           </button>
           <button
-            className="hover:text-secondary transition-all"
+            className="hover:text-secondary-400 transition-all"
             onClick={() => window.open()}
           >
             Resource
           </button>
           <button
-            className="hover:text-secondary transition-all"
+            className="hover:text-secondary-400 transition-all"
             onClick={() => window.open()}
           >
             Installation
