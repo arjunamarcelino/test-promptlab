@@ -53,8 +53,8 @@ export default function Connect() {
         ))}
       </div>
 
-      <div className="min-h-[547px] mt-10 w-full bg-gradient-to-b from-[#10181E] to-[#0E1F25] rounded-xl p-12 flex flex-col md:flex-row items-center shadow-lg">
-        <div className="w-full md:w-1/2">
+      <div className="min-h-[547px] mt-10 w-full bg-gradient-to-b from-[#10181E] to-[#0E1F25] rounded-xl flex flex-col md:flex-row items-center shadow-lg">
+        <div className="w-full md:w-1/2 p-16">
           <h3 className="text-5xl font-semibold">GitHub & GitLab</h3>
           <p className="text-lg text-secondary-200 mt-4 max-w-[490]">
             Push, pull, and manage your repositories with built-in GitHub and
@@ -63,12 +63,12 @@ export default function Connect() {
           </p>
         </div>
 
-        <div className="w-full md:w-1/2 flex justify-center mt-6 md:mt-0">
+        <div className="w-full h-full mb-[-18px] md:w-1/2 flex justify-center mt-6 md:mt-0">
           <Image
             src="/images/img-connect-tools.png"
             alt="GitHub & GitLab"
-            width={300}
-            height={200}
+            width={1000}
+            height={1000}
             className="object-contain"
           />
         </div>
