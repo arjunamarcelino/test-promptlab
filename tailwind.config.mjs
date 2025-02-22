@@ -15,6 +15,7 @@ export default {
         interDisplayMedium: "InterDisplay-Medium",
         interDisplayRegular: "InterDisplay-Regular",
         interDisplaySemiBold: "InterDisplay-SemiBold",
+        mPlusCodeLatinReguler: "MPLUSCodeLatin-Regular",
       },
       colors: {
         background: {
@@ -36,7 +37,10 @@ export default {
         },
         secondary: {
           DEFAULT: "#A1FFFF",
-        }
+          100: "#BBDCFF",
+          200: "#6D747E",
+          300: "#6D7E7A",
+        },
       },
     },
   },

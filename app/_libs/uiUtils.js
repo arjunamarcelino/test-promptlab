@@ -19,10 +19,19 @@ export const scrollToSection = (sectionId) => {
   };
 
   if (window.location.pathname === `/`) {
-    
     scrollTo();
   } else {
     window.location.href = `/#${sectionId}`;
     window.addEventListener("load", scrollTo, { once: true });
+  }
+};
+
+export const copyToClipboard = async (text) => {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch (error) {
+    console.error("Failed to copy:", error);
+    return false;
   }
 };

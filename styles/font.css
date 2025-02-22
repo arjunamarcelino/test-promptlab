@@ -21,5 +21,11 @@
     src: url("/fonts/InterDisplay-SemiBold.ttf") format("truetype");
     font-display: swap;
 }
+
+@font-face {
+    font-family: "MPLUSCodeLatin-Regular";
+    src: url("/fonts/MPLUSCodeLatin-Regular.ttf") format("truetype");
+    font-display: swap;
+}
   
 /*# sourceMappingURL=fonts.css.map */  
