@@ -17,7 +17,7 @@ export default function Works() {
   return (
     <section
       id="works"
-      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-background text-white px-[60px]"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-background text-white px-[60px] mb-[100px]"
     >
       <div className="flex flex-col bg-gradient-to-b from-[#10181E] to-[#0E1F25] rounded-3xl justify-center items-center py-10 w-full">
         <div className="w-[90%] max-w-[1200px] flex flex-col lg:flex-row items-center rounded-xl py-6">
@@ -39,46 +39,14 @@ export default function Works() {
               Try It Now
             </PrimaryButton>
           </div>
-          <div className="lg:w-1/2 flex justify-center relative mt-10 lg:mt-0">
-            <div className="relative w-[300px] h-[300px] flex items-center justify-center">
-              <div className="absolute w-full h-full flex items-center justify-center rounded-full border border-gray-700">
-                <span className="text-lg font-bold text-gray-300">
-                  PromptLab
-                </span>
-              </div>
-              <div className="absolute top-0 left-10">
-                <Image
-                  src="/icons/chatgpt.svg"
-                  alt="ChatGPT"
-                  width={40}
-                  height={40}
-                />
-              </div>
-              <div className="absolute bottom-0 left-5">
-                <Image
-                  src="/icons/claude.svg"
-                  alt="Claude"
-                  width={40}
-                  height={40}
-                />
-              </div>
-              <div className="absolute top-5 right-0">
-                <Image
-                  src="/icons/gemini.svg"
-                  alt="Gemini"
-                  width={40}
-                  height={40}
-                />
-              </div>
-              <div className="absolute bottom-5 right-5">
-                <Image
-                  src="/icons/nike.svg"
-                  alt="Nike"
-                  width={40}
-                  height={40}
-                />
-              </div>
-            </div>
+
+          <div className="ml-40 lg:w-2/3 flex justify-center relative mt-10 lg:mt-0">
+            <Image
+              src="/images/img-works-promptlab.png"
+              alt="works-promptlab"
+              width={350}
+              height={350}
+            />
           </div>
         </div>
 

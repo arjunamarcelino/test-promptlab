@@ -5,6 +5,7 @@
     html{
         @apply font-interDisplayRegular;
     }
+    
   :root {
         --background: 0 0% 100%;
         --foreground: 0 0% 3.9%;
@@ -67,4 +68,18 @@
   body {
     @apply bg-background text-foreground;
     }
+}
+
+@layer components {
+  .buttonGradient {
+    background: linear-gradient(
+        180deg,
+        rgba(108, 108, 108, 0.15) 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      linear-gradient(90deg, #039EA1 0%, #165155 100%);
+    box-shadow: 0px 1px 2px rgba(0, 98, 158, 0.5),
+      0px 0px 0px 2px rgba(255, 255, 255, 0.25),
+      inset 0px -2px 4px rgba(79, 98, 4, 0.5);
+  }
 }

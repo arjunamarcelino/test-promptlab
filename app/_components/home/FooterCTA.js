@@ -25,7 +25,7 @@ export default function FooterCTA() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.5, type: "spring", stiffness: "250" }}
+            transition={{ delay: 0.3, type: "spring", stiffness: "250" }}
             className="text-5xl font-interDisplayMedium"
           >
             Ready to Code Smarter?
@@ -34,7 +34,7 @@ export default function FooterCTA() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.5, type: "spring", stiffness: "250" }}
+            transition={{ delay: 0.3, type: "spring", stiffness: "250" }}
             className="text-lg text-primary-100"
           >
             The future of development is AI-powered, and it starts here. No more
@@ -44,7 +44,7 @@ export default function FooterCTA() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.5, type: "spring", stiffness: "250" }}
+            transition={{ delay: 0.3, type: "spring", stiffness: "250" }}
             className="flex flex-row gap-[33px]"
           >
             <FaXTwitter className="text-white" size={32} />

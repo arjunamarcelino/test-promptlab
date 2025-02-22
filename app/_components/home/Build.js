@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Icons } from "../icons/Icons";
 import { BorderLogo } from "../ui/border-logo";
 import { motion } from "framer-motion";
+import { PrimaryButton } from "../ui/button";
 
 export default function Build() {
   const [isMounted, setIsMounted] = useState(false);
@@ -16,7 +17,7 @@ export default function Build() {
   return (
     <section
       id="build"
-      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-background text-white px-[60px]"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-background text-white px-[60px] mb-[120px]"
     >
       <div className="flex flex-col bg-gradient-to-b from-[#101D1E] to-[#173038] rounded-3xl justify-center items-center py-[77px] w-full">
         <motion.h1
@@ -44,6 +45,9 @@ export default function Build() {
             />
           ))}
         </div>
+        <PrimaryButton className="min-w-[160px] mt-12">
+          Try It Now
+        </PrimaryButton>
       </div>
     </section>
   );
@@ -61,7 +65,9 @@ const Card = ({ title, desc, logo, index }) => {
       <BorderLogo logo={logo} />
       <div className="flex flex-col">
         <p className="text-left text-shadow text-lg">{title}</p>
-        <span className="text-left text-secondary-300 text-shadow text-lg">{desc}</span>
+        <span className="text-left text-secondary-300 text-shadow text-lg bg-">
+          {desc}
+        </span>
       </div>
     </motion.div>
   );

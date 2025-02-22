@@ -29,14 +29,14 @@ export default function Start() {
   return (
     <section
       id="start"
-      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-background text-white"
+      className="relative w-full flex flex-col items-center justify-center bg-background text-white mt-[150px] mb-[80px]"
     >
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1, type: "spring", stiffness: "250" }}
-        className="absolute flex items-center justify-center top-44 z-30 pointer-events-none text-5xl font-interDisplayMedium"
+        className="relative flex items-center justify-center z-30 pointer-events-none text-5xl font-interDisplayMedium"
       >
         Start Building with AI Now!
       </motion.h1>
