@@ -2,10 +2,27 @@
 import Image from "next/image";
 import RiveComponentControls from "../home/RiveComponent";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import Spline from "@splinetool/react-spline";
 
 export default function Hero() {
   const [isMounted, setIsMounted] = useState(false);
+
+  const splineRef = useRef(null);
+
+  const onLoad = (splineApp) => {
+    splineRef.current = splineApp;
+
+    // Find the laptop object by its name in Spline
+    const laptop = splineApp.findObjectByName("Laptop"); // Change to actual object name
+
+    if (laptop) {
+      // Example: Rotate the laptop slightly when clicked
+      laptop.addEventListener("click", (event) => {
+        laptop.rotation.y += 20
+      });
+    }
+  };
 
   useEffect(() => {
     setIsMounted(true);
@@ -16,10 +33,10 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[200vh] overflow-hidden bg-transparant"
+      className="relative min-h-[150vh] overflow-hidden bg-transparant"
     >
       <div className="relative h-screen w-full flex items-center justify-center">
-        <div className="absolute inset-0 w-full h-full pb-4">
+        <div className="absolute inset-0 w-full h-full">
           <RiveComponentControls
             play={true}
             playOnCanvas={true}
@@ -27,7 +44,7 @@ export default function Hero() {
             alignment="start"
           />
         </div>
-        <div className="absolute inset-0 w-full h-full z-10 pointer-events-none">
+        <div className="absolute inset-0 w-full h-auto z-10 pointer-events-none">
           <Image
             src="/images/img-hero-highlight-2.png"
             alt="highlight"
@@ -43,26 +60,12 @@ export default function Hero() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             whileHover={{ rotate: -1, scale: 1.05 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: "250" }}
+            transition={{ delay: 0.4, type: "spring", stiffness: "250" }}
             className="h-[200px] bg-gradient-to-r from-white via-gray-400 to-gray-500 text-transparent bg-clip-text text-shadow font-interDisplayMedium max-lg:text-5xl text-[200px] leading-[160px] text-center"
           >
             PromptLab
           </motion.h1>
         </div>
-      </div>
-      <div
-        style={{ clipPath: "ellipse(100% 80% at center top)" }}
-        className="h-screen bg-background/40 absolute inset-x-0 z-10 flex items-center justify-center"
-      />
-      <div className="w-full inset-x-0 h-[410px] absolute z-0 bottom-[410px]">
-        <Image
-          src={"/images/img-hero-highlight-2.png"}
-          alt="highlight"
-          width={1000}
-          height={1000}
-          priority
-          className="size-full object-fill"
-        />
       </div>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -71,13 +74,9 @@ export default function Hero() {
         transition={{ delay: 0.1, type: "spring", stiffness: "250" }}
         className="absolute flex items-center justify-center top-[-23px] z-30 pointer-events-none"
       >
-        <Image
-          src="/images/img-hero-mockup.png"
-          alt="mockup"
-          layout="intrinsic"
-          width={1000}
-          height={1000}
-          className="w-screen max-w-full h-auto object-contain"
+        <Spline
+          scene="https://prod.spline.design/7Yvo70AVWpNRc7xj/scene.splinecode"
+          onLoad={onLoad}
         />
       </motion.div>
     </section>

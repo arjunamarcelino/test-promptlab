@@ -24,15 +24,21 @@ export default function Build() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.2, type: "spring", stiffness: "250" }}
+          transition={{ delay: 0.3, type: "spring", stiffness: "250" }}
           className="text-shadow font-interDisplayMedium max-lg:text-5xl text-[56px] leading-[66px] text-center"
         >
           Build Full-Stack Apps in Seconds{" "}
         </motion.h1>
-        <span className="text-secondary-200 mt-4">
+        <motion.span
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, type: "spring", stiffness: "250" }}
+          className="text-secondary-200 mt-4"
+        >
           PromptLab integrates with the best AI models, giving you the freedom
           to choose the right tool for the job.
-        </span>
+        </motion.span>
 
         <div className="grid max-lg:grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[60px] mt-[65px]">
           {CARD_ITEMS.map((item, index) => (
@@ -45,9 +51,16 @@ export default function Build() {
             />
           ))}
         </div>
-        <PrimaryButton className="min-w-[160px] mt-12">
-          Try It Now
-        </PrimaryButton>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, type: "spring", stiffness: "250" }}
+        >
+          <PrimaryButton className="min-w-[160px] mt-12">
+            Try It Now
+          </PrimaryButton>
+        </motion.div>
       </div>
     </section>
   );

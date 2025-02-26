@@ -26,31 +26,56 @@ export default function Works() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1, type: "spring", stiffness: "250" }}
+              transition={{ delay: 0.4, type: "spring", stiffness: "250" }}
               className="text-[56px] font-interDisplayMedium"
             >
               AI That Works the Way You Do
             </motion.h2>
-            <p className="text-secondary-200 mt-4">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, type: "spring", stiffness: "250" }}
+              className="text-secondary-200 mt-4"
+            >
               PromptLab integrates with the best AI models, giving you the
               freedom to choose the right tool for the job.
-            </p>
-            <PrimaryButton className="mt-6 min-w-[135px]">
-              Try It Now
-            </PrimaryButton>
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, type: "spring", stiffness: "250" }}
+            >
+              <PrimaryButton className="mt-6 min-w-[135px]">
+                Try It Now
+              </PrimaryButton>
+            </motion.div>
           </div>
 
-          <div className="ml-40 lg:w-2/3 flex justify-center relative mt-10 lg:mt-0">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, type: "spring", stiffness: "250" }}
+            className="ml-40 lg:w-2/3 flex justify-center relative mt-10 lg:mt-0"
+          >
             <Image
               src="/images/img-works-promptlab.png"
               alt="works-promptlab"
               width={350}
               height={350}
             />
-          </div>
+          </motion.div>
         </div>
 
-        <div className="w-[90%] max-w-[1200px] flex flex-col lg:flex-row justify-between mt-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, type: "spring", stiffness: "250" }}
+          className="w-[90%] max-w-[1200px] flex flex-col lg:flex-row justify-between mt-10"
+        >
           <div className="bg-gradient-to-b from-[#1A262E] to-[#16232D] rounded-lg p-2 flex items-center gap-4 w-full lg:w-[48%]">
             <div className="min-h-[150] min-w-[133px] rounded-lg px-4 bg-gradient-to-b from-[#000000] to-[#152D2E] flex justify-center items-center">
               <Image
@@ -92,7 +117,7 @@ export default function Works() {
               </SecondaryButton>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -37,16 +37,28 @@ export default function Start() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.1, type: "spring", stiffness: "250" }}
+        transition={{ delay: 0.3, type: "spring", stiffness: "250" }}
         className="relative flex items-center justify-center z-30 pointer-events-none text-5xl font-interDisplayMedium"
       >
         Start Building with AI Now!
       </motion.h1>
-      <p className="text-lg text-primary-100 mt-4">
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3, type: "spring", stiffness: "250" }}
+        className="text-lg text-primary-100 mt-4"
+      >
         Type your prompt. Watch your code come to life.
-      </p>
+      </motion.p>
 
-      <div className="relative flex items-center min-w-[489px] gap-3 px-5 py-3 mt-10 text-xl text-secondary-400 font-mPlusCodeLatinReguler border rounded-3xl bg-gradient-to-b from-[#10181E] to-[#0E1F25] border-[#1E3A47] shadow-md justify-between">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3, type: "spring", stiffness: "250" }}
+        className="relative flex items-center min-w-[489px] gap-3 px-5 py-3 mt-10 text-xl text-secondary-400 font-mPlusCodeLatinReguler border rounded-3xl bg-gradient-to-b from-[#10181E] to-[#0E1F25] border-[#1E3A47] shadow-md justify-between"
+      >
         <span className="tracking-wide">{command}</span>
         <MdOutlineContentCopy
           className="cursor-pointer hover:text-white transition"
@@ -58,8 +70,14 @@ export default function Start() {
             Copied!
           </span>
         )}
-      </div>
-      <div className="flex flex-row gap-3 mt-8">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3, type: "spring", stiffness: "250" }}
+        className="flex flex-row gap-3 mt-8"
+      >
         <PrimaryButton
           className="min-w-[135px]"
           onClick={() => router.push("/product")}
@@ -72,7 +90,7 @@ export default function Start() {
           </span>
           <span className="flex items-center">2,092</span>
         </SecondaryButton>
-      </div>
+      </motion.div>
     </section>
   );
 }
