@@ -2,27 +2,11 @@
 import Image from "next/image";
 import RiveComponentControls from "../home/RiveComponent";
 import { motion } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import Spline from "@splinetool/react-spline";
 
 export default function Hero() {
   const [isMounted, setIsMounted] = useState(false);
-
-  const splineRef = useRef(null);
-
-  const onLoad = (splineApp) => {
-    splineRef.current = splineApp;
-
-    // Find the laptop object by its name in Spline
-    const laptop = splineApp.findObjectByName("Laptop"); // Change to actual object name
-
-    if (laptop) {
-      // Example: Rotate the laptop slightly when clicked
-      laptop.addEventListener("click", (event) => {
-        laptop.rotation.y += 20
-      });
-    }
-  };
 
   useEffect(() => {
     setIsMounted(true);
@@ -67,18 +51,9 @@ export default function Hero() {
           </motion.h1>
         </div>
       </div>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.1, type: "spring", stiffness: "250" }}
-        className="absolute flex items-center justify-center top-[-23px] z-30 pointer-events-none"
-      >
-        <Spline
-          scene="https://prod.spline.design/7Yvo70AVWpNRc7xj/scene.splinecode"
-          onLoad={onLoad}
-        />
-      </motion.div>
+      <div className="absolute flex items-center justify-center z-30 pointer-events-none top-[-23px] md:top-[-10px] lg:top-[-23px]">
+        <Spline scene="https://prod.spline.design/7Yvo70AVWpNRc7xj/scene.splinecode" />
+      </div>
     </section>
   );
 }

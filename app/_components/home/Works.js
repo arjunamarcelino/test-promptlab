@@ -17,17 +17,17 @@ export default function Works() {
   return (
     <section
       id="works"
-      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-transparant text-white px-[60px] mb-[100px]"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-transparent text-white px-6 md:px-[60px] mb-[120px]"
     >
-      <div className="flex flex-col bg-gradient-to-b from-[#10181E] to-[#0E1F25] rounded-3xl justify-center items-center py-10 w-full">
-        <div className="w-[90%] max-w-[1200px] flex flex-col lg:flex-row items-center rounded-xl py-6">
-          <div className="lg:w-1/2 text-white max-w-[522px]">
+      <div className="flex flex-col bg-gradient-to-b from-[#10181E] to-[#0E1F25] rounded-3xl justify-center items-center py-[50px] md:py-[77px] w-full">
+        <div className="w-[90%] flex flex-col lg:flex-row items-center rounded-xl py-6">
+          <div className="lg:w-1/2 text-white max-w-xl text-center lg:text-left">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.4, type: "spring", stiffness: "250" }}
-              className="text-[56px] font-interDisplayMedium"
+              transition={{ delay: 0.4, type: "spring", stiffness: 250 }}
+              className="text-3xl md:text-[56px] sm:text-4xl font-interDisplayMedium sm:leading-[1.2]"
             >
               AI That Works the Way You Do
             </motion.h2>
@@ -35,7 +35,7 @@ export default function Works() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.3, type: "spring", stiffness: "250" }}
+              transition={{ delay: 0.3, type: "spring", stiffness: 250 }}
               className="text-secondary-200 mt-4"
             >
               PromptLab integrates with the best AI models, giving you the
@@ -45,9 +45,9 @@ export default function Works() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.3, type: "spring", stiffness: "250" }}
+              transition={{ delay: 0.3, type: "spring", stiffness: 250 }}
             >
-              <PrimaryButton className="mt-6 min-w-[135px]">
+              <PrimaryButton className="min-w-[160px] mt-8 md:mt-12">
                 Try It Now
               </PrimaryButton>
             </motion.div>
@@ -57,14 +57,15 @@ export default function Works() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3, type: "spring", stiffness: "250" }}
-            className="ml-40 lg:w-2/3 flex justify-center relative mt-10 lg:mt-0"
+            transition={{ delay: 0.3, type: "spring", stiffness: 250 }}
+            className="lg:w-1/2 flex justify-center relative mt-10 lg:mt-0"
           >
             <Image
               src="/images/img-works-promptlab.png"
               alt="works-promptlab"
               width={350}
               height={350}
+              className="max-w-full"
             />
           </motion.div>
         </div>
@@ -73,50 +74,41 @@ export default function Works() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3, type: "spring", stiffness: "250" }}
-          className="w-[90%] max-w-[1200px] flex flex-col lg:flex-row justify-between mt-10"
+          transition={{ delay: 0.3, type: "spring", stiffness: 250 }}
+          className="w-[90%] flex flex-col lg:flex-row justify-between gap-6 mt-10"
         >
-          <div className="bg-gradient-to-b from-[#1A262E] to-[#16232D] rounded-lg p-2 flex items-center gap-4 w-full lg:w-[48%]">
-            <div className="min-h-[150] min-w-[133px] rounded-lg px-4 bg-gradient-to-b from-[#000000] to-[#152D2E] flex justify-center items-center">
-              <Image
-                src="/images/img-works-openai.png"
-                alt="ChatGPT"
-                width={60}
-                height={60}
-              />
+          {[
+            {
+              img: "/images/img-works-openai.png",
+              title: "ChatGPT for code generation?",
+              desc: "The go-to AI for code generation, debugging, and explanations.",
+              btnText: "Try OpenAI",
+            },
+            {
+              img: "/images/img-works-gemini.png",
+              title: "Gemini for deep reasoning?",
+              desc: "Best for deep reasoning, structured coding, and research-heavy tasks.",
+              btnText: "Try Gemini",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="bg-gradient-to-b from-[#1A262E] to-[#16232D] rounded-lg p-4 flex items-center gap-4 w-full lg:w-[48%]"
+            >
+              <div className="h-20 w-20 rounded-lg flex justify-center items-center bg-gradient-to-b from-black to-[#152D2E]">
+                <Image src={item.img} alt={item.title} width={60} height={60} />
+              </div>
+              <div>
+                <h3 className="text-white text-lg font-semibold">
+                  {item.title}
+                </h3>
+                <p className="text-secondary-300 text-sm mt-1">{item.desc}</p>
+                <SecondaryButton className="mt-2 text-sm text-secondary-100 flex items-center gap-2">
+                  {item.btnText} <AiOutlineArrowRight />
+                </SecondaryButton>
+              </div>
             </div>
-            <div>
-              <h3 className="text-white text-lg">
-                ChatGPT for code generation?
-              </h3>
-              <p className="text-secondary-300 text-sm">
-                The go-to AI for code generation, debugging, and explanations.
-              </p>
-              <SecondaryButton className="mt-2 text-sm text-secondary-100 flex items-center gap-2">
-                Try OpenAI <AiOutlineArrowRight />
-              </SecondaryButton>
-            </div>
-          </div>
-          <div className="bg-gradient-to-b from-[#1A262E] to-[#16232D] rounded-lg p-2 flex items-center gap-4 w-full lg:w-[48%]">
-            <div className="min-h-[150] min-w-[133px] rounded-lg px-4 bg-gradient-to-b from-[#000000] to-[#152D2E] flex justify-center items-center">
-              <Image
-                src="/images/img-works-gemini.png"
-                alt="ChatGPT"
-                width={60}
-                height={60}
-              />
-            </div>
-            <div>
-              <h3 className="text-white text-lg">Gemini for deep reasoning?</h3>
-              <p className="text-secondary-300 text-sm">
-                Best for deep reasoning, structured coding, and research-heavy
-                tasks.
-              </p>
-              <SecondaryButton className="mt-2 text-sm text-secondary-100 flex items-center gap-2">
-                Try Gemini <AiOutlineArrowRight />
-              </SecondaryButton>
-            </div>
-          </div>
+          ))}
         </motion.div>
       </div>
     </section>

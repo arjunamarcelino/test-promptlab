@@ -8,7 +8,7 @@ import {
 } from "@heroui/react";
 import { motion } from "framer-motion";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
-import { PrimaryButton } from "./ui/button";
+import { PrimaryButton, SecondaryButton } from "./ui/button";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { scrollToSection } from "../_libs/uiUtils";
@@ -100,31 +100,36 @@ export default function Header() {
 const Sidebar = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = "15px";
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+    }
+  }, [isOpen]);
+
   return (
     <>
-      <PrimaryButton
+      <SecondaryButton
         onClick={onOpen}
-        className={
-          "lg:hidden w-[40px] h-[38px] rounded-xl p-0 ml-auto mr-5 pointer-events-auto flex justify-center items-center"
-        }
+        className="lg:hidden w-[40px] h-[38px] rounded-xl p-0 ml-auto mr-6 pointer-events-auto flex justify-center items-center"
       >
         <IoMdMenu size={24} />
-      </PrimaryButton>
+      </SecondaryButton>
       <Modal
         hideCloseButton
         placement="center"
         isOpen={isOpen}
         onOpenChange={onOpenChange}
       >
-        <ModalContent className="bg-background text-foreground h-[60vh] relative">
+        <ModalContent className="bg-background text-foreground h-[60vh] relative mx-8">
           {(onClose) => (
             <>
               <div className="p-6 w-fit">
                 <motion.button
-                  whileHover={{
-                    scale: 1.05,
-                    originX: 0.3,
-                  }}
+                  whileHover={{ scale: 1.05, originX: 0.3 }}
                   transition={{ type: "spring", stiffness: 100 }}
                   className="h-5 w-[77px]"
                   onClick={() => {
@@ -143,14 +148,12 @@ const Sidebar = () => {
               </div>
               <PrimaryButton
                 onClick={onClose}
-                className={
-                  "w-[24px] h-[24px] rounded-full p-0 ml-auto pointer-events-auto absolute top-4 right-4 flex justify-center items-center"
-                }
+                className="w-[24px] h-[24px] rounded-full p-0 ml-auto absolute top-4 right-4 flex justify-center items-center"
               >
                 <IoMdClose />
               </PrimaryButton>
               <ModalBody className="items-start">
-                <nav className="flex flex-col items-start gap-6 text-base">
+                <nav className="text-white flex flex-col items-start gap-6 text-base">
                   <button
                     className="hover:text-primary-100 transition-all"
                     onClick={() => {
@@ -178,7 +181,6 @@ const Sidebar = () => {
                   >
                     Resource
                   </button>
-
                   <button
                     className="hover:text-primary-100 transition-all"
                     onClick={() => {
