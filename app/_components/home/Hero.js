@@ -17,7 +17,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[200vh] overflow-hidden bg-transparant"
+      className="relative min-h-[120vh] md:min-h-[200vh] overflow-hidden bg-transparant"
     >
       <div className="relative h-screen w-full flex items-center justify-center">
         <div className="absolute inset-0 w-full h-full">
@@ -51,7 +51,7 @@ export default function Hero() {
           </motion.h1>
         </div>
       </div>
-      <div className="absolute flex items-center justify-center z-30 pointer-events-none top-48">
+      <div className="absolute flex items-center justify-center z-30 pointer-events-none top-96 md:top-48">
         <Spline scene="https://prod.spline.design/7Yvo70AVWpNRc7xj/scene.splinecode" />
       </div>
     </section>
