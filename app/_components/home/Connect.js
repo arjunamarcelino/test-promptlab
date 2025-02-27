@@ -53,14 +53,14 @@ export default function Connect() {
         ))}
       </div>
 
-      <div className="min-h-[400px] md:min-h-[547px] mt-10 w-full bg-gradient-to-b from-[#10181E] to-[#0E1F25] rounded-xl flex flex-col md:flex-row items-center shadow-lg py-6 pl-6 md:py-12 md:pl-12 ">
+      <div className="min-h-[400px] md:min-h-[547px] mt-10 w-full bg-gradient-to-b from-[#10181E] to-[#0E1F25] rounded-xl flex flex-col md:flex-row items-center shadow-lg py-4 pl-6 md:py-0 md:pl-12 ">
         <div className="w-full md:w-1/2 text-center md:text-left">
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, type: "spring", stiffness: 250 }}
-            className="text-2xl md:text-5xl font-semibold pr-6 md:pr-12"
+            className="text-2xl md:text-5xl font-semibold pr-6 md:pr-12 mt-6 md:mt-0"
           >
             {activeTab}
           </motion.h3>

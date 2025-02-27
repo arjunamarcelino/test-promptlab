@@ -103,7 +103,7 @@ const Sidebar = () => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
-      document.body.style.paddingRight = "15px";
+      document.body.style.paddingRight = "0px";
     } else {
       document.body.style.overflow = "";
       document.body.style.paddingRight = "";
@@ -146,12 +146,12 @@ const Sidebar = () => {
                   />
                 </motion.button>
               </div>
-              <PrimaryButton
+              <SecondaryButton
                 onClick={onClose}
                 className="w-[24px] h-[24px] rounded-full p-0 ml-auto absolute top-4 right-4 flex justify-center items-center"
               >
                 <IoMdClose />
-              </PrimaryButton>
+              </SecondaryButton>
               <ModalBody className="items-start">
                 <nav className="text-white flex flex-col items-start gap-6 text-base">
                   <button

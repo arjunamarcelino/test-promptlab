@@ -19,7 +19,7 @@ export default function FooterCTA() {
       id="footercta"
       className="relative w-full h-auto flex flex-col items-center justify-center bg-transparant text-white px-6 md:px-[60px] mb-[120px]"
     >
-      <div className="flex flex-col bg-[url('/images/img-cta-highlight.png')] bg-cover rounded-3xl justify-center items-center py-[77px] w-full">
+      <div className="flex flex-col bg-[url('/images/img-cta-highlight.png')] md:bg-cover rounded-3xl justify-center items-center py-[77px] w-full">
         <div className="max-w-[636px] flex flex-col items-center text-center mx-auto gap-4 py-[100px]">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}

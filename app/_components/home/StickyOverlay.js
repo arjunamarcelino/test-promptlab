@@ -16,7 +16,7 @@ export default function StickyOverlay() {
         className="pointer-events-none"
       />
       <Particles
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-2"
         quantity={100}
         ease={80}
         color={color}

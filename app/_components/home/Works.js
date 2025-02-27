@@ -95,8 +95,14 @@ export default function Works() {
               key={index}
               className="bg-gradient-to-b from-[#1A262E] to-[#16232D] rounded-lg p-4 flex items-center gap-4 w-full lg:w-[48%]"
             >
-              <div className="h-20 w-20 rounded-lg flex justify-center items-center bg-gradient-to-b from-black to-[#152D2E]">
-                <Image src={item.img} alt={item.title} width={60} height={60} />
+              <div className="h-full w-40 md:w-24 rounded-lg flex justify-center items-center bg-gradient-to-b from-black to-[#152D2E]">
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  width={60}
+                  height={60}
+                  className="object-contain flex-shrink-0"
+                />
               </div>
               <div>
                 <h3 className="text-white text-lg font-semibold">
