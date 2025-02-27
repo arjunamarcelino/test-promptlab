@@ -51,7 +51,7 @@ export default function Hero() {
           </motion.h1>
         </div>
       </div>
-      <div className="absolute flex items-center justify-center z-20 pointer-events-none bottom-0 md:bottom-16">
+      <div className="absolute flex items-center justify-center z-20 pointer-events-none bottom-0 md:bottom-16 size-full md:size-auto">
         <Spline scene="https://prod.spline.design/7Yvo70AVWpNRc7xj/scene.splinecode" />
       </div>
     </section>
